@@ -24,6 +24,15 @@ app.use("^/$", (req, res, next) => {
     });
 });
 
+// app.get('/', (req, res) => {
+//     res.send(`
+//     <html>
+//         <body>
+//         <div id="root">${ReactDOMServer.renderToString(<App />)}</div>
+//         </body>
+//     </html>`)
+// })
+
 app.use(express.static(path.resolve(__dirname, '..', 'build')))
 
 app.listen(PORT, () => {
